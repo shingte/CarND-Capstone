@@ -1,0 +1,36 @@
+{
+    "model": {
+        "backend": "Tiny Yolo",
+        "input_size": 416,
+        "anchors": [0.20, 0.64, 0.29, 0.91, 0.42, 1.35, 0.62, 2.11, 1.00, 3.22],
+        "max_box_per_image": 10,
+        "labels": ["red", "green"]
+    },
+
+    "train": {
+        "train_image_folder": "D:/DataFile/ExternalLearning/YoloAlgorithm/red_traffic_dataset/images/",
+        "train_annot_folder": "D:/DataFile/ExternalLearning/YoloAlgorithm/red_traffic_dataset/annotations/",
+
+        "train_times": 8,
+        "pretrained_weights": "",
+        "batch_size": 30,
+        "learning_rate": 1e-4,
+        "nb_epochs": 100,
+        "warmup_epochs": 8,
+
+        "object_scale": 5.0,
+        "no_object_scale": 1.0,
+        "coord_scale": 1.0,
+        "class_scale": 1.0,
+
+        "saved_weights_name": "tiny_yolo_trafficred3.h5",
+        "debug": false
+    },
+
+    "valid": {
+        "valid_image_folder": "",
+        "valid_annot_folder": "",
+
+        "valid_times": 1
+    }
+}
